@@ -1,12 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -16,40 +12,41 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
 
           {/* Brand Info */}
-          <div>
-            <h2 className="text-2xl font-bold text-white">
-              IQRA DEMOLITION
-            </h2>
+<div>
+  <h2 className="text-2xl font-bold text-white">
+    IQRA DEMOLITION
+  </h2>
 
-            <p className="mt-4 text-sm leading-6 text-gray-400">
-              Professional demolition and dismantling services for
-              residential, commercial and industrial projects.
-              Serving Mumbai, Navi Mumbai & Maharashtra.
-            </p>
+  <p className="mt-4 text-sm leading-6 text-gray-400">
+    Professional demolition and dismantling services for
+    residential, commercial and industrial projects.
+    Serving Mumbai, Navi Mumbai & Maharashtra.
+  </p>
 
-            <div className="mt-6 flex gap-4">
+  <div className="mt-8 flex gap-5">
 
-              <a
-  href="https://www.instagram.com/iqra_demolition/"
-  target="_blank"
-  className="rounded-full bg-neutral-800 p-3 hover:bg-white hover:text-black transition"
->
-  <span className="font-bold text-lg">
-    ◎
-  </span>
-</a>
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/iqra_demolition/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+    >
+      <FaInstagram className="text-white" size={34} />
+    </a>
 
-              <a
-                href="https://wa.me/919768888198"
-                target="_blank"
-                className="rounded-full bg-neutral-800 p-3 hover:bg-green-500 hover:text-white transition"
-              >
-                <MessageCircle size={20} />
-              </a>
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/919768888198"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+    >
+      <FaWhatsapp className="text-white" size={34} />
+    </a>
 
-            </div>
-
-          </div>
+  </div>
+</div>
 
 
           {/* Navigation Links */}
@@ -97,24 +94,69 @@ export default function Footer() {
 
 
           {/* Services */}
-          <div>
+<div>
+  <h3 className="text-lg font-semibold text-white">
+    Services
+  </h3>
 
-            <h3 className="text-lg font-semibold text-white">
-              Services
-            </h3>
+  <ul className="mt-4 space-y-3 text-sm">
 
-            <ul className="mt-4 space-y-3 text-sm">
+    <li>
+      <Link
+        href="/services/building-demolition"
+        className="hover:text-orange-500 transition"
+      >
+        Building Demolition
+      </Link>
+    </li>
 
-              <li>Building Demolition</li>
-              <li>RCC Structure Demolition</li>
-              <li>Industrial Demolition</li>
-              <li>Concrete Breaking</li>
-              <li>Debris Removal</li>
+    <li>
+      <Link
+        href="/services/rcc-demolition"
+        className="hover:text-orange-500 transition"
+      >
+        RCC Demolition
+      </Link>
+    </li>
 
-            </ul>
+    <li>
+      <Link
+        href="/services/factory-demolition"
+        className="hover:text-orange-500 transition"
+      >
+        Factory Demolition
+      </Link>
+    </li>
 
-          </div>
+    <li>
+      <Link
+        href="/services/site-clearance"
+        className="hover:text-orange-500 transition"
+      >
+        Site Clearance
+      </Link>
+    </li>
 
+    <li>
+      <Link
+        href="/services/excavation-work"
+        className="hover:text-orange-500 transition"
+      >
+        Excavation Work
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/services/scrap-recovery"
+        className="hover:text-orange-500 transition"
+      >
+        Scrap Recovery
+      </Link>
+    </li>
+
+  </ul>
+</div>
 
 
           {/* Contact */}
