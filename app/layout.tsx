@@ -4,7 +4,10 @@ import { Inter, Oswald, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,11 +19,13 @@ const oswald = Oswald({
   variable: "--font-oswald",
 });
 
-export const metadata = {
-  metadataBase: new URL("https://iqra-demolition.vercel.app"), // Replace with your actual domain later
-  title: "IQRA Demolition",
-  description: "Professional demolition services across India",
-};
+export const metadata: Metadata = {
+  metadataBase: new URL("https://iqra-demolition.vercel.app"), // Change to your custom domain after purchase
+
+  title: {
+    default: "IQRA Demolition",
+    template: "%s | IQRA Demolition",
+  },
 
   description:
     "IQRA Demolition provides professional building demolition, industrial demolition, excavation, dismantling and site clearance services across Mumbai, Navi Mumbai and Maharashtra.",
@@ -38,14 +43,41 @@ export const metadata = {
     "IQRA Demolition",
   ],
 
-  authors: [{ name: "IQRA Demolition" }],
+  authors: [
+    {
+      name: "IQRA Demolition",
+    },
+  ],
 
   openGraph: {
     title: "IQRA Demolition",
     description:
       "Professional Building Demolition & Excavation Services in Mumbai.",
-    images: ["/images/logo.png"],
+
+    url: "https://iqra-demolition.vercel.app",
+
+    siteName: "IQRA Demolition",
+
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "IQRA Demolition",
+      },
+    ],
+
+    locale: "en_IN",
+
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "IQRA Demolition",
+    description:
+      "Professional Building Demolition & Excavation Services in Mumbai.",
+    images: ["/images/logo.png"],
   },
 
   icons: {
@@ -63,9 +95,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${inter.variable} ${oswald.variable}`}>
-  <StructuredData />
-  {children}
-</body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
