@@ -20,26 +20,26 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iqra-demolition.vercel.app"), // Change to your custom domain after purchase
+  metadataBase: new URL("https://iqra-demolition.vercel.app"),
 
   title: {
-    default: "IQRA Demolition",
+    default: "Demolition Contractors in Mumbai | IQRA Demolition",
     template: "%s | IQRA Demolition",
   },
 
   description:
-    "IQRA Demolition provides professional building demolition, industrial demolition, excavation, dismantling and site clearance services across Mumbai, Navi Mumbai and Maharashtra.",
+    "IQRA Demolition provides professional building demolition, RCC demolition, industrial demolition, excavation, site clearance and scrap recovery services in Mumbai, Navi Mumbai and across Maharashtra.",
 
   keywords: [
-    "Building Demolition Mumbai",
-    "Demolition Contractor Mumbai",
-    "Industrial Demolition",
-    "Excavation Contractor",
-    "Site Clearance",
-    "Concrete Demolition",
-    "RCC Demolition",
-    "Rock Breaking",
-    "Demolition Maharashtra",
+    "demolition contractors Mumbai",
+    "demolition company Mumbai",
+    "building demolition Mumbai",
+    "RCC demolition Mumbai",
+    "industrial demolition Mumbai",
+    "factory demolition Mumbai",
+    "site clearance Mumbai",
+    "excavation contractors Mumbai",
+    "demolition contractors Maharashtra",
     "IQRA Demolition",
   ],
 
@@ -49,15 +49,28 @@ export const metadata: Metadata = {
     },
   ],
 
+  creator: "IQRA Demolition",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   openGraph: {
-    title: "IQRA Demolition",
-    description:
-      "Professional Building Demolition & Excavation Services in Mumbai.",
-
-    url: "https://iqra-demolition.vercel.app",
-
+    type: "website",
+    locale: "en_IN",
+    url: "https://iqra-demolition.vercel.app/",
     siteName: "IQRA Demolition",
-
+    title: "Demolition Contractors in Mumbai | IQRA Demolition",
+    description:
+      "Professional building, RCC and industrial demolition, excavation and site clearance services in Mumbai, Navi Mumbai and Maharashtra.",
     images: [
       {
         url: "/images/logo.png",
@@ -66,24 +79,22 @@ export const metadata: Metadata = {
         alt: "IQRA Demolition",
       },
     ],
-
-    locale: "en_IN",
-
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "IQRA Demolition",
+    title: "Demolition Contractors in Mumbai | IQRA Demolition",
     description:
-      "Professional Building Demolition & Excavation Services in Mumbai.",
+      "Professional demolition, excavation and site clearance services across Mumbai, Navi Mumbai and Maharashtra.",
     images: ["/images/logo.png"],
   },
 
+  alternates: {
+    canonical: "https://iqra-demolition.vercel.app/",
+  },
+
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/favicon.png",
   },
 };
 
@@ -93,8 +104,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${inter.variable} ${oswald.variable}`}>
+    <html lang="en">
+      <body
+        className={cn(
+          geist.variable,
+          inter.variable,
+          oswald.variable,
+          "font-sans"
+        )}
+      >
         <StructuredData />
         {children}
       </body>
