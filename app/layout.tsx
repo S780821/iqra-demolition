@@ -20,7 +20,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iqra-demolition.vercel.app"),
+  metadataBase: new URL("https://iqra-demolition.com"),
 
   title: {
     default: "Demolition Contractors in Mumbai | IQRA Demolition",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iqra-demolition.vercel.app/",
+    url: "https://iqra-demolition.com/",
     siteName: "IQRA Demolition",
     title: "Demolition Contractors in Mumbai | IQRA Demolition",
     description:
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://iqra-demolition.vercel.app/",
+    canonical: "https://iqra-demolition.com/",
   },
 
   icons: {
