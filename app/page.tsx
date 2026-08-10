@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import VideoPopup from "@/components/VideoPopup";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Stats from "@/components/Stats";
